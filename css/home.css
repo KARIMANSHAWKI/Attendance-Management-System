@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    position: relative;
+}
+
+.home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#myVideo {
+    position: fixed;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio:16/9) {
+    #myVadio {
+        width: 100%;
+        height: auto
+    }
+}
+
+@media (max-aspect-ratio:16/9) {
+    #myVadio {
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+/*******************Start Form******************/
+
+.login {
+    /*Login Part*/
+    width: 450px;
+    height: 450px;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    position: relative;
+}
+
+.login h2 {
+    margin-top: 50px;
+    margin-left: 117px;
+    color: #19E6E6;
+    font-family: 'Oswald', sans-serif;
+}
+
+.login form {
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    margin-left: 76px;
+    margin-top: 37px;
+}
+
+.login .user-class,
+.login .user-pass {
+    display: -webkit-box;
+    position: relative;
+}
+
+.login .success input,
+.register .success input {
+    border-color: #2ecc71;
+}
+
+.login .error input,
+.register .error input {
+    border-color: #e74c3c;
+}
+
+.error i.fa-exclamation-circle {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.success i.fa-check-circle {
+    visibility: visible;
+    color: #2ecc71;
+}
+
+.login i {
+    -webkit-box-flex: 1;
+    margin-left: -25px;
+    margin-top: 16px;
+    font-size: 18px;
+    visibility: hidden;
+}
+
+.register .fa-check-circle {
+    -webkit-box-flex: 1;
+    -webkit-box-flex: 1;
+    margin-left: -40px;
+    margin-top: 12px;
+}
+
+.register i {
+    visibility: hidden;
+}
+
+.login .form-control-user {
+    font-size: 17px;
+    border-radius: 56px;
+    padding: 11px 26px;
+    background-color: transparent;
+    border: 2px solid #6C7576;
+    color: #fff;
+    outline: none;
+    -webkit-box-flex: 1;
+}
+
+.login .btn-user {
+    background-color: teal;
+    border-color: teal;
+    outline: none;
+    color: #fff;
+}
+
+form .btn-link {
+    margin-top: 10px;
+}
+
+.register {
+    /*Register Part*/
+    width: 550px;
+    height: 550px;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    position: relative;
+    display: none;
+}
+
+.register .reg-content {
+    margin-left: 73px;
+    margin-top: 66px;
+    text-align: center;
+    z-index: 9999;
+}
+
+.register .reg-content h2 {
+    margin-left: -80px;
+    margin-bottom: 50px;
+    color: #19E6E6;
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+.register form {
+    width: 400px;
+    height: 400px;
+    align-items: center;
+}
+
+.register .form-control-user {
+    font-size: 17px;
+    border-radius: 56px;
+    padding: 11px 26px;
+    background-color: transparent;
+    border: 2px solid #6C7576;
+    color: #fff;
+    outline: none;
+    -webkit-box-flex: 1;
+}
+
+.register .form-control-user {
+    -webkit-box-flex: 1;
+}
+
+.register .btn-user {
+    background-color: teal;
+    border-color: teal;
+    outline: none;
+    color: #fff;
+}
+
+.register .btn-link {
+    margin-top: 10px;
+}
+
+.register .row>div {
+    display: -webkit-box;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.message  {
+    margin-top: 10px;
+    color:#a2a7a4;
+}
+
+.message a {
+    font-size: 14px;
+    transition: all .5s ease-in-out;
+}
+
+.message:hover{
+   color:#fff;
+   
+}

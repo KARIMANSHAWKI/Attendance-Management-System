@@ -1,0 +1,252 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/profile.css">
+
+    <!-- ajax call -->
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/6.5.0/d3.min.js"></script>
+</head>
+
+<body>
+    <!-- <div id="authentication" class="mt-5 text-center">
+        <div class="error mx-auto" data-text="401">401</div>
+        <p class="lead text-gray-800 mb-5">Unauthorized</p>
+        <p class="text-gray-700 mb-1">the request has not been applied because it lacks valid authentication credentials for the target resource.
+        </p>
+        <a href="home.html">&larr; Back to home page</a>
+    </div> -->
+    <div class="profile_container">
+        <nav>
+            <div class="links-left ">
+                <h3 id="profile_title">Admin</h3>
+            </div>
+            <div class="links-right">
+                <h6 id="emp_name">Ahmed</h6>
+                <div class="userImg ">
+                    <img src="../images/undraw_profile_1.svg " alt=" ">
+                </div>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col-3 navSide">
+                <ul>
+                    <li>
+                        <a href="#" class="active" data-toggle="tooltip " data-placement="right " title="reports">
+                            <span>
+                            <i class="fa fa-database " aria-hidden="true "></i>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="# " data-toggle="tooltip " data-placement="right " title="employees ">
+                            <span>
+                                <i class="fa fa-users " aria-hidden="true "></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="# " data-toggle="tooltip " data-placement="right "  title="Confirm attendance">
+                            <span>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-9">
+                <!-- ****** image interface ******** -->
+            <div class="profilInterface"> </div> 
+
+            <!-- ******************** Profile Content******************** -->
+               <div class="content-body">
+                <h6>Welcome back,<span class="userWelcom"></span></h6>
+                <div class="container">
+
+                     <!-- ************************** Reports part *************** -->
+                    <div class="row reports">
+                        <div class="col-xl-12">
+                            <div class="card sub-menu">
+                                <div class="card-body card-one">
+                                    <ul class="d-flex">
+                                        <li class="nav-item active" id="monthlyTab">
+                                                <i class="mdi mdi-database-plus"></i>
+                                                <span>Monthly Report </span>
+                                        </li>
+                                        <li class="nav-item" id="dailyTab">
+                                                <i class="mdi mdi-book"></i>
+                                                <span>Daily Report</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="card" id="monthlyCard">
+                                <div class="card-header">
+                                    <h4 class="card-title">Monthly Report</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>This table contains your Monthly report</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Abcence Times </th>
+                                                    <th>Excuse Times</th>
+                                                    <th>Late</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="monthlyReportRows">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-12">
+                            <div class="card" id="dailyCard">
+                                <div class="card-header">
+                                    <h4 class="card-title">Daily Report</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>This table contains your daily report</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>State </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="dailyReportRows">
+
+                                            </tbody>
+                                           
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                   <!-- ********************Employee Info Part ******************* -->
+                    <div class="row inf-body">
+                        <div class="col-xl-12">
+                            <div class="card sub-menu">
+                                <div class="card-body card-one">
+                                    <ul class="d-flex">
+                                        <li class="nav-item active" id="monthlyTab">
+                                                <i class="mdi mdi-database-plus"></i>
+                                                <span>Your Infomations</span>
+                                        </li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="card" id="monthlyCard">
+                                <div class="card-header">
+                                    <h4 class="card-title">Your Informations</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>This table contains your Daitails</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Email </th>
+                                                    <th>Code</th>
+                                                    <th>Address</th>
+                                                    <th>Age</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody id="empData">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-- **************** Start Attendance Part ************** -->
+                        <div class="row attend-body">
+                            <div class="col-xl-12">
+                              <div class="attend-container">
+                                  <div class="img">
+                                      <h4>Confirm</h4> 
+                                      <h4>Attendance</h4>
+                                    
+                                     
+                                  </div>
+                                  <div class="form">
+                                    <form>
+                                        <div class="form-details">
+                                            <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
+                                            
+                                            <input type="text" placeholder="username" id="confirmUser">
+                                        </div>
+                                        <button class="dark-button" type="submit" id="attendanceConfirm">Confirm</button>
+                                    </form>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <!-- ********************* Start Footer ****************** -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer">
+                        <div class="copy">
+                            <p>© Copyright 2020 <span>ITI</span> I All Rights Reserved</p>
+                        </div>
+                        <div class="social">
+                            <ul>
+                                <li>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </li>
+                                <li>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </li>
+                                <li>
+                                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                                </li>
+                                <li>
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/JQuery-3.3.1.min.js "></script>
+        <script src="../js/popper.js ">
+        </script>
+        <script src="../js/bootstrap.min.js "></script>
+        <script src="../js/profile.js"></script>
+        <script src="../modals/dailyReport.js"></script>
+        <script src="../js/attendance.js"></script>
+        
+
+</body>
+
+</html>
+
+</html>

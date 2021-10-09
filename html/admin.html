@@ -1,0 +1,374 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/font-awesome.css" rel="stylesheet" />
+    <link href="../css/profile.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <!-- ajax call -->
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/6.5.0/d3.min.js"></script>
+</head>
+
+<body>
+    <!-- <nav>
+        <div class="dashbord ">
+            <h2>Dashboard</h2>
+        </div>
+        <div class="links ">
+            <h3>Ahmed</h3>
+            <div class="userImg ">
+                <img src="../images/undraw_profile_1.svg " alt=" ">
+            </div>
+        </div>
+    </nav> -->
+
+
+    <nav>
+        <div class="links-left ">
+            <h3>Admin</h3>
+        </div>
+        <div class="links-right">
+            <h6 class="adminName"></h6>
+            <div class="userImg ">
+                <img src="../images/undraw_profile_1.svg " alt=" ">
+            </div>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col-3 navSide">
+            <ul>
+                <li>
+                    <a href="#" class="active" data-toggle="tooltip " data-placement="right " title="reports">
+                        <span>
+                            <i class="fa fa-database " aria-hidden="true "></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="# " data-toggle="tooltip " data-placement="right " title="employees ">
+                        <span>
+                            <i class="fa fa-users " aria-hidden="true "></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="# " data-toggle="tooltip " data-placement="right " title="requests">
+                        <span class="request">
+                            <i class="fa fa-envelope-square" aria-hidden="true "></i>
+                            <span id="reqNum"></span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-9 ">
+            <div class="profilInterface"> </div>
+
+            <!-- ******************** Profile Content******************** -->
+            <div class="content-body">
+                <h6>Welcome back,<span class="userWelcom"></span></h6>
+                <div class="container">
+
+                    <!-- ************************** Reports part *************** -->
+                    <div class="row reports">
+                        <div class="col-xl-12">
+                            <div class="card sub-menu">
+                                <div class="card-body card-one">
+                                    <ul class="d-flex">
+                                        <li class="nav-item active" id="monthlyTab">
+                                            <i class="mdi mdi-database-plus"></i>
+                                            <span>Monthly Report </span>
+                                        </li>
+                                        <li class="nav-item dropdown" id="dailyTab">
+                                            <a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown">
+                                                <i class="mdi mdi-file-export"></i>
+                                                <span>Daily Reports</span>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#" id="item-one">Attendance</a>
+                                                <a class="dropdown-item" href="#" id="item-tow">Excuse</a>
+                                                <a class="dropdown-item" href="#" id="item-three">Absence</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="card" id="monthlyCard">
+                                <div class="card-header">
+                                    <h4 class="card-title">Monthly Report</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>This table contains Employees Monthly Report</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Date </th>
+                                                    <th>Attendance Times</th>
+                                                    <th>Absence Times</th>
+                                                    <th>Excuse Times</th>
+                                                    <th>Late Times</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="monthlyReportRows">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ************************* Daily Report ********************* -->
+
+                        <!-- ***** first Addendance Card ********* -->
+                        <div class="col-xl-12">
+                            <div class="card" id="attendCard">
+                                <div class="card-header">
+                                    <h4 class="card-title">Attendants Of The Day</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>This table contains Employees Attendants Today </p>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Date </th>
+                                                    <th>Attendance Times</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="AttendantsToday">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ***** Scond Excuse Card ********* -->
+                        <div class="col-xl-12">
+                            <div class="card" id="excuseCard">
+                                <div class="card-header">
+                                    <h4 class="card-title">Excuse Of The Day</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>This table contains Employees Excused Today</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Date </th>
+                                                    <th>Excuse Times</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="ExcusedToday">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ***** third Absence Card ********* -->
+                        <div class="col-xl-12">
+                            <div class="card" id="abscentCard">
+                                <div class="card-header">
+                                    <h4 class="card-title">Abscents Of The Day</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>This table contains Employees Abscents Today</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Date </th>
+                                                    <th>Absence Times</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="AbscentsToday">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- ******************* Employees Informations *************** -->
+                <div class="row inf-body">
+                    <div class="col-xl-12">
+                        <div class="card sub-menu">
+                            <div class="card-body card-one">
+                                <ul class="d-flex">
+                                    <li class="nav-item active" id="monthlyTab">
+                                        <i class="mdi mdi-database-plus"></i>
+                                        <span>Employees Details </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12">
+                        <div class="card" id="monthlyCard">
+                            <div class="card-header">
+                                <h4 class="card-title">Employees Details</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>This table contains your Employees Informations</p>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Username</th>
+                                                <th>Code </th>
+                                                <th>Email</th>
+                                                <th>Address</th>
+                                                <th>Age</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="impInfo">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- *************** Requests Body ****************** -->
+            <div class="row req-body">
+                <div class="col-xl-12">
+                    <div class="card sub-menu">
+                        <div class="card-body card-one">
+                            <ul class="d-flex">
+                                <li class="nav-item active" id="monthlyTab">
+                                    <i class="mdi mdi-database-plus"></i>
+                                    <span>Request Table </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="card" id="monthlyCard">
+                        <div class="card-header">
+                            <h4 class="card-title">Request Table</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>This table contains Request From New Employees</p>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>UserName</th>
+                                            <th>Password</th>
+                                            <th>Email</th>
+                                            <th>Age</th>
+                                            <th>Address</th>
+                                            <th>Accept</th>
+                                            <th>Reject</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="RequestTable">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-12">
+                    <div class="card" id="dailyCard">
+                        <div class="card-header">
+                            <h4 class="card-title">Daily Report</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>This table contains your daily report</p>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Attendance Times</th>
+                                            <th>Abcence Times </th>
+                                            <th>Excuse Times</th>
+                                            <th>Late</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="dailyReportRows">
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- ********************* Start Footer ******************** -->
+    <div class="row">
+        <div class="col-12">
+            <div class="footer">
+                <div class="copy">
+                    <p>© Copyright 2020 <span>ITI</span> I All Rights Reserved</p>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li>
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/JQuery-3.3.1.min.js "></script>
+    <script src="../js/popper.js ">
+    </script>
+    <script src="../js/bootstrap.min.js "></script>
+    <script src="../modals/employee.js"></script>
+    <script src="../js/admin.js"></script>
+
+
+</body>
+
+</html>
+
+</html>

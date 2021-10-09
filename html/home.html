@@ -1,0 +1,127 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/home.css">
+
+
+</head>
+
+<body>
+    <section class="home">
+        <video autoplay muted loop id="myVideo">
+            <source src="../ALEXA-2019short.mp4" type="video/mp4">
+        </video>
+
+        <!-----------------------------Login Part------------------------------>
+        
+      <div class="login form">
+            <div class="overlay"></div>>
+            <div class="log-content">
+                <h2>Welcome Back !</h2>
+                <form class="user" novalidate="" action="" method="" id="loginForm">
+                    <!-- UserName --> 
+                    <div class="form-group">
+                        <div class="user-class">
+                            <input type="text" class="form-control form-control-user" pattern="^[A-Za-z]{3,20}$" id="loginUser" aria-describedby="emailHelp " pattern="^[a-zA-Z]{2}[a-zA-Z0-9]+$ " placeholder="Username " maxlength="50 " required>
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">Invalid</div> 
+                            <!-- <i class="fa fa-check-circle " aria-hidden="true "></i>
+                            <i class="fa fa-exclamation-circle " aria-hidden="true "></i>  -->
+                        </div>
+
+                    </div>
+                    <!-- password --> 
+                    <div class="form-group">
+                        <div class="user-pass">
+                            <input type="password" class="form-control form-control-user" minlength="8" maxlength="30" id="loginPassword" placeholder="Password " minlength="8 " maxlength="30 " required>
+                            <!-- <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i> -->
+                        </div>
+
+                    </div>
+
+                    <!-- submit button -->
+                    <button id="loginSubmit" type="submit" class="btn btn-user btn-block">Login</button>
+
+                    <div class="text-center message ">
+                        <a id="regLink" class="small btn">Create an Account!</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-----------------------------Register Section----------------------------->
+        <div class="register form ">
+            <div class="overlay "></div>
+            <div class="reg-content ">
+                <h2>Create an Acount</h2>
+                <form class="user " novalidate=" " action=" " method=" " id="regForm">
+                    <div class="row ">
+                        <!-- username -->
+                        <div class="form-group col-6 reg_user ">
+                            <input type="text" class="form-control form-control-user " id="regUser" aria-describedby="emailHelp " pattern="^[A-Za-z]{3,20}$" placeholder="Username " maxlength="50" required>
+                            <!-- <i class="fa fa-check-circle " aria-hidden="true "></i>
+                            <i class="fa fa-exclamation-circle " aria-hidden="true "></i> -->
+                        </div>
+                        <!-- password -->
+                        <div class="form-group col-6 reg_pass ">
+                            <input type="password" class="form-control form-control-user" id="regPassword" placeholder="Password " minlength="8" maxlength="30" required>
+                            <!-- <i class="fa fa-check-circle " aria-hidden="true "></i>
+                            <i class="fa fa-exclamation-circle " aria-hidden="true "></i> -->
+                        </div>
+                    </div>
+
+                    <!--Email-->
+                    <div class="row ">
+                        <div class="form-group col-12 reg_email">
+                            <input type="email" class="form-control form-control-user" id="regEmail" placeholder="Email Address " pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" maxlength="50" required>
+                            <!-- <i class="fa fa-check-circle" aria-hidden="true "></i>
+                            <i class="fa fa-exclamation-circle " aria-hidden="true "></i> -->
+                        </div>
+
+                    </div>
+                    <!-- Address And age -->
+                    <div class="form-group row ">
+                        <div class="col-6 mb-3 mb-sm-0 reg_address">
+                            <input type="text" class="form-control form-control-user" id="regAddress" minlength="6" maxlength="80" placeholder="Address" required>
+                            <!-- <i class="fa fa-check-circle " aria-hidden="true"></i>
+                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i> -->
+                        </div>
+                        <div class="col-6 reg_age">
+                            <input type="date" max="1998-01-02" min="1960-01-02" class=" form-control
+                            form-control-user" id="registerDob" placeholder="Date of birth"
+                    required>
+                             <!-- <i class="fa fa-check-circle " aria-hidden="true "></i>
+                            <i class="fa fa-exclamation-circle" aria-hidden="true "></i> -->
+                        </div>
+                    </div>
+                    <!-- submit button -->
+                    <button id="regSubmit" type="submit" action="mailto:kariman0800@gmail.com?subject=hello&body=" class=" btn btn-user btn-block ">Register</button>
+
+                    <div class="text-center message ">
+                        <p>Already Have Acount? <a id="loginLink" class="small btn ">LogIn</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../js/bootstrap.min.js "></script>
+    <script src="../js/JQuery-3.3.1.min.js "></script>
+    <script src="../js/popper.js "></script>
+    <script src="../modals/employee.js "></script>
+    <script src="../js/home.js "></script>
+    <script>
+    </script>
+
+
+
+</body>
+
+</html>

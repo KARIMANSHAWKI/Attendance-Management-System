@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+
+
+/***************************************************************************/
+a{
+    text-decoration: none;
+
+}
+.card {
+    border: 0px solid #363C4E;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 13px 0 rgba(82, 63, 105, 0.05);
+    background: #131722;
+}
+.card .card-body {
+    padding: 15px 20px;
+    background: #131722;
+    border-radius: 15px;
+}
+
+/*****************my constant style*****************/
+li {
+    list-style: none;
+}
+
+ h6 {
+    color:#a1a0a7;
+    margin-left: -30px;
+    margin-bottom: 25px;
+    font-weight: 400px;
+}
+
+h6 span {
+    color: #19e6e6
+}
+#dailyCard{
+    display: none;
+}
+.sub-menu ul li {
+    margin-top: 5px;
+    color: #a1a0a7;
+}
+
+.sub-menu ul li:nth-child(2) {
+    margin-left: 30px;
+    position: relative;
+}
+.sub-menu ul li span {
+    color: #a1a0a7;
+}
+.sub-menu ul li:hover span, .sub-menu ul li:focus span, .sub-menu ul li.active span, .sub-menu ul li.active {
+    color: #19e6e6;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card-one{
+    width:1117px;
+    height:60px
+}
+
+.card {
+    margin-left: -50px;
+}
+.card-header {
+    width:1117px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #363C4E;
+    background: #131722;
+    padding: 15px 20px;
+}
+.card-body p {
+    margin-top: 0;
+    color: #a1a0a7;
+    font-size: 14px;
+   
+}
+.card-title {
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+.card .card-body {
+    padding: 15px 20px;
+    background: #131722;
+    border-radius: 5px;
+    width:1117px;
+}
+
+.table tr td, .table tr th {
+    border: 0px;
+    vertical-align: middle;
+    padding: 15px;
+}
+
+.table-striped thead tr th {
+    padding-bottom: 15px !important;
+}
+ tbody tr td {
+   color:#a1a0a7;
+   font-size: 14px;
+   
+}
+.table tr th {
+    padding: 0px 5px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #000;
+}
+
+
+.inf-body {
+    display: none;
+}
+
+.reports {
+    display:none;
+}
+
+.attend-body {
+    display: none;
+}
+
+.profilInterface{
+    width: 100%;
+    height: 500px;
+    background-image: url("../images/undraw_Business_decisions_re_84ag.svg");
+    background-repeat: no-repeat;
+    margin-left: 100px;
+}
+
+
+/* **************** attendance section ************** */
+.attend-container {
+    margin-left: 195px;
+    margin-right: 195px;
+    margin-top: 88px;
+    display: -webkit-box;
+}
+
+.form {
+    width:250px;
+    height: 250px;
+    background-color: #171717;
+    display: inline-block;
+    -webkit-box-flex: 2;
+}
+
+.img {
+    background-color: #010102;
+    width:250px;
+    height: 250px;
+    box-shadow: 10px 0 5px #32caca;
+    text-align: center;
+    -webkit-box-flex: 1;
+}
+.img h4 {
+    font-family: 'Stalinist One', cursive;
+    margin-top: 30px;
+    color:#32caca;
+    box-shadow: 10px 0 5px #363C4E;
+}
+
+.img h4:nth-child(1) {
+    margin-top: 62px;
+}
+
+.img p{
+    text-align: left;
+    font-size: 15px;
+}
+.img .imgs {
+    width:100px;
+    height:100px;
+    
+}
+
+.img .imgs li {
+    font-size: 10px;
+    width:164px
+}
+
+.form-details h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #a1a0a7;
+    margin:10px auto;
+    background: transparent;
+    border-color: #363C4E;
+}
+
+.form-details i {
+    color:#289494;
+}
+
+.form-details input {
+    transform: translate3d(0, 40px, 0);
+	width: 80%;
+	color: white;
+	padding: 8px 5px;
+	background: linear-gradient(#222, #1a1a1a);
+	border: 1px solid #000;
+    border-left-color: rgba(255, 255, 200, 0.1);
+    margin-bottom: 60px;
+    outline: none;
+    margin-left: 30px;
+}
+
+
+.dark-button {
+    display: flex;
+    flex-grow: 1;
+    min-width: 80%;
+      padding: 12px;
+      padding-bottom: 8px;
+      border: 1px solid #19191a;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                    inset 0 18px 4px rgba(255, 255, 255, 0.2),
+                    1px 1px 0 #111, 2px 2px 0 #111;
+      background: #000000;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+      transition: all .3s;
+      outline: none;
+      margin-left:30px;
+      cursor: pointer;
+      color:#666;
+      text-align: center;
+}
+
+.disable {
+    cursor: no-drop;
+    opacity: 0.5;
+}
+
+.notValid {
+    border:3px solid red;
+    color:red
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: -1px;
+    border-top: 0.3em solid #19e6e6;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.fa-clock-o {
+    display: none;
+}
+    
+/* .dropdown-toggle::after:hover
+{
+    border-top: 0.3em solid #19e6e6;
+} */
+
+
+
+
